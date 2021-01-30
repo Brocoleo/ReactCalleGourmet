@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Products } from './components';
+import { Navbar, Products, Cart, CartItem } from './components';
 import { commerce } from './lib/commerce';
 
 const App = () => {
@@ -20,7 +20,7 @@ const App = () => {
     const item = await commerce.cart.add(productId, quantity);
 
     setCart(item.cart);
-  }
+  };
 
   useEffect(() => {
     fetchProducts();
@@ -32,8 +32,9 @@ const App = () => {
       <div>
         <Navbar totalItems={cart.total_items}/>
         <Products products={products} onAddToCart={handleAddToCart}/>
+        <Cart cart={cart}/>
       </div>
     
-  )
+  );
 }
 export default App;
