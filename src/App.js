@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Products, Cart , Checkout} from './components';
+import { GlobalStyle } from './globalStyles';
+import { Navbar, Products, Cart , Checkout, Hero, Footer} from './components';
 import { commerce } from './lib/commerce';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -49,13 +50,16 @@ const App = () => {
 
   return (    
     <Router>
+      <GlobalStyle />
         <div>
         <Navbar totalItems={cart.total_items}/>
-
-        <Switch>
+        
+        <Switch>    
 
           <Route exact path="/">
-            <Products products={products} onAddToCart={handleAddToCart}/>
+            <Hero />
+            <Products heading='Menu' products={products} onAddToCart={handleAddToCart}/>
+            <Footer />
           </Route>
 
           <Route exact path="/cart">
@@ -65,15 +69,16 @@ const App = () => {
             handleRemoveFromCart = {handleRemoveFromCart}
             handleEmptyCart = {handleEmptyCart}
             />
+            <Footer />            
           </Route> 
 
           <Route exact path="/checkout">
-            <Checkout cart ={cart}/>
+            <Checkout cart ={cart}/> 
+            <Footer />           
           </Route>      
         
         </Switch>        
-      </div>
-    
+      </div>      
     </Router>
       
   );

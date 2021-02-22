@@ -13,6 +13,7 @@ export default makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    fontFamily: 'Kaushan Script',
     alignItems: 'center',
     display: 'flex',
     textDecoration: 'none',

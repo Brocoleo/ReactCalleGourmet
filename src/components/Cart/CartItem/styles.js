@@ -15,4 +15,14 @@ export default makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
   },
+  title:{
+    fontWeight: '500',
+    fontSize: '1.5rem',
+  },
+  price:{
+  marginBottom: '0rem',
+  fontSize: '1.5rem',
+  fontFamily: 'Alfa Slab One',  
+  },
+ 
 }));
