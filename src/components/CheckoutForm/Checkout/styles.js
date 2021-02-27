@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
     marginTop: '5%',
     width: 'auto',
     marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2),  
     [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
       width: 600,
       marginLeft: 'auto',
@@ -49,4 +49,9 @@ export default makeStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  container: {
+    minHeight: '100vh',
+    background: '#150f0f',
+    color: '#fff',
+  }
 }));

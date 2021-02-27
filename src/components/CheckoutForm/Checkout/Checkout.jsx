@@ -38,11 +38,11 @@ const Checkout = (cart) => {
 
 
     return (
-        <>
+        <div className={classes.container}>
             <div className={classes.toolbar} /> 
             <main className={classes.layout}>
                 <Paper className={classes.paper}>
-                    <Typography variant="h4" align="center">Checkout</Typography>
+                    <Typography variant="h4" align="center">Datos Cliente</Typography>
                     <Stepper activeStep={0} className={classes.stepper}>
                         {steps.map((step) =>(
                             <Step key={step}>
@@ -53,7 +53,7 @@ const Checkout = (cart) => {
                     {activeStep === steps.length ? <Confirmation />: checkoutToken &&  <Form />}
                 </Paper>
             </main>
-        </>
+        </div>
     )
 }
 

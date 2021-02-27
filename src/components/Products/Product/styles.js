@@ -39,6 +39,7 @@ export const ProductPrice = styled.p`
   font-size: 2rem;
   font-family: 'Alfa Slab One';
   color: #ffc500;
+  letter-spacing: 1pt;
 `;
 
 export const ProductButton = styled.button`

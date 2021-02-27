@@ -41,16 +41,17 @@ export default makeStyles((theme) => ({
     marginBottom: '0rem',
     fontSize: '1.5rem',
     fontFamily: 'Alfa Slab One', 
-    color: '#e9ba23'  
+    color: '#e9ba23' ,
+    textIndent: '5pt',
+    letterSpacing: '2pt'
     },
     total:{
       display: 'flex',
       alignItems: 'flex-start',
     },
-    title:{
-      fontWeight: '500',
-      fontSize: '1.5rem',
-    }
+    root: {
+      flexGrow: '1',
+    },
  
   
  

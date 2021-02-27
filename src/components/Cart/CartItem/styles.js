@@ -1,28 +1,31 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles(() => ({
-  media: {
-    height: 260,
+export default makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
   },
-  cardContent: {
-    display: 'flex',
-    justifyContent: 'space-between',
+  paper: {
+    padding: theme.spacing(2),
+    margin: 'auto', 
+    maxWidth: 500,
   },
-  cartActions: {
-    justifyContent: 'space-between',
+  image: {
+    width: 128,
+    height: 128,
   },
-  buttons: {
-    display: 'flex',
-    alignItems: 'center',
+  img: {
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
   },
-  title:{
-    fontWeight: '500',
-    fontSize: '1.5rem',
+  textSizeLarge: {
+    fontSize: '20px'
   },
-  price:{
-  marginBottom: '0rem',
-  fontSize: '1.5rem',
-  fontFamily: 'Alfa Slab One',  
+  precio: {
+    paddingBottom: '10px',
+    fontSize: '1.2rem',
+    letterSpacing: '1pt',
+    fontFamily: 'Alfa Slab One', 
   },
- 
 }));
